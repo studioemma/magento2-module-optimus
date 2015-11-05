@@ -31,6 +31,9 @@ class Index extends \Magento\Framework\App\Action\Action
      */
     public function execute()
     {
-        return $this->resultPageFactory->create();
+        $page = $this->resultPageFactory->create();
+        $page->getConfig()->addBodyClass('page-content-examples');
+        $page->getConfig()->addBodyClass('cms-page-view');
+        return $page;
     }
 }
