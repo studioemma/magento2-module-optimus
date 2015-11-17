@@ -9,16 +9,15 @@
   ],
   "require": {
     "php": "~5.5.0|~5.6.0|~7.0.0",
-    "magento/framework": "~1.0.0",
-    "magento/module-catalog": "~1.0.0",
-    "magento/magento-composer-installer": "*"
+    "magento/framework": "100.0.*",
+    "magento/module-catalog": "100.0.*"
   },
-  "extra": {
-    "map": [
-      [
-        "*",
-        "StudioEmma/Optimus"
-      ]
-    ]
+  "autoload": {
+      "files": [
+          "registration.php"
+      ],
+      "psr-4": {
+          "StudioEmma\\Optimus\\": ""
+      }
   }
 }
