@@ -5,9 +5,10 @@
  */
 
 var config = {
-    map: {
-        '*': {
-            responsiveslides: 'StudioEmma_Optimus/js/responsiveslides.min'
-        }
+    paths: {
+        responsiveslides: 'StudioEmma_Optimus/js/responsiveslides.min'
+    },
+    shim: {
+        responsiveslides: ['jquery']
     }
 };
