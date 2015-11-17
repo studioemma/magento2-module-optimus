@@ -192,31 +192,20 @@
     </div>
 </div>
 
-<?php /*
-<h1 class="supporting title">Slideshow</h1>
+<h1 class="supporting title">Slideshow simple</h1>
 
-<div class="home-slideshow-wrapper">
-    <div>
-        <ul id="home-slideshow">
-            <li><a class="img-link" href="#"><img alt="" src="http://placehold.it/1240x380?text=Slide 1" /></a> <a class="desc-link" href="#">Slide 1 titel</a></li>
-            <li><a class="img-link" href="#"><img alt="" src="http://placehold.it/1240x380?text=Slide 2" /></a> <a class="desc-link" href="#">Slide 2 titel</a></li>
-            <li><a class="img-link" href="#"><img alt="" src="http://placehold.it/1240x380?text=Slide 3" /></a> <a class="desc-link" href="&ldquo;#&rdquo;">Slide 3 titel</a></li>
-            <li><a class="img-link" href="#"><img alt="" src="http://placehold.it/1240x380?text=Slide 4" /></a> <a class="desc-link" href="#">Slide 4 titel</a></li>
-        </ul>
-    </div>
-    <script type="text/javascript">// <![CDATA[
-        require(["jquery"], function($){
-            $(document).ready(function () {
-                //Replace php getviewfile to {{view url="Magento_Theme::images/transp.png"}}
-                $('#home-slideshow').funslider({
-                    width: 1240,
-                    height: 380,
-                    placeholderPath:'<?php echo $block->getViewFileUrl('Magento_Theme::images/transp.png'); ?>',
-                    }
-                );
-            });
+<div>
+    <ul class="rslides rslides-simple">
+        <li><a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=95&txt=Slide1&w=1240&h=380&txttrack=0&bg=eeeeee&txtclr=cccccc" alt=""></a></li>
+        <li><a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=95&txt=Slide2&w=1240&h=380&txttrack=0&bg=cccccc&txtclr=eeeeee" alt=""></a></li>
+        <li><a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=95&txt=Slide3&w=1240&h=380&txttrack=0&bg=eeeeee&txtclr=cccccc" alt=""></a></li>
+        <li><a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=95&txt=Slide4&w=1240&h=380&txttrack=0&bg=cccccc&txtclr=eeeeee" alt=""></a></li>
+    </ul>
+    <script type="text/javascript">
+        require(['jquery','responsiveslides','domReady!'], function($){
+            $(".rslides-simple").responsiveSlides({ speed: 1000, timeout: 5000 });
         });
-    // ]]></script>
+    </script>
 </div>
 
 <br />
@@ -225,34 +214,64 @@
 <div class="htmlCode moreText">
 <p>Kopie&euml;r &amp; plak de onderstaande code in de html weergave uw CMS pagina of static block in Magento</p>
 <textarea style="padding: .5em;" rows="10" cols="80">
-    &#x3C;div class=&#x22;home-slideshow-wrapper&#x22;&#x3E;
-    &#x3C;div&#x3E;
-        &#x3C;ul id=&#x22;home-slideshow&#x22;&#x3E;
-            &#x3C;li&#x3E;&#x3C;a class=&#x22;img-link&#x22; href=&#x22;#&#x22;&#x3E;&#x3C;img alt=&#x22;&#x22; src=&#x22;http://placehold.it/1240x380?text=Slide 1&#x22; /&#x3E;&#x3C;/a&#x3E; &#x3C;a class=&#x22;desc-link&#x22; href=&#x22;#&#x22;&#x3E;Slide 1 titel&#x3C;/a&#x3E;&#x3C;/li&#x3E;
-            &#x3C;li&#x3E;&#x3C;a class=&#x22;img-link&#x22; href=&#x22;#&#x22;&#x3E;&#x3C;img alt=&#x22;&#x22; src=&#x22;http://placehold.it/1240x380?text=Slide 2&#x22; /&#x3E;&#x3C;/a&#x3E; &#x3C;a class=&#x22;desc-link&#x22; href=&#x22;#&#x22;&#x3E;Slide 2 titel&#x3C;/a&#x3E;&#x3C;/li&#x3E;
-            &#x3C;li&#x3E;&#x3C;a class=&#x22;img-link&#x22; href=&#x22;#&#x22;&#x3E;&#x3C;img alt=&#x22;&#x22; src=&#x22;http://placehold.it/1240x380?text=Slide 3&#x22; /&#x3E;&#x3C;/a&#x3E; &#x3C;a class=&#x22;desc-link&#x22; href=&#x22;&#x26;ldquo;#&#x26;rdquo;&#x22;&#x3E;Slide 3 titel&#x3C;/a&#x3E;&#x3C;/li&#x3E;
-            &#x3C;li&#x3E;&#x3C;a class=&#x22;img-link&#x22; href=&#x22;#&#x22;&#x3E;&#x3C;img alt=&#x22;&#x22; src=&#x22;http://placehold.it/1240x380?text=Slide 4&#x22; /&#x3E;&#x3C;/a&#x3E; &#x3C;a class=&#x22;desc-link&#x22; href=&#x22;#&#x22;&#x3E;Slide 4 titel&#x3C;/a&#x3E;&#x3C;/li&#x3E;
-        &#x3C;/ul&#x3E;
-    &#x3C;/div&#x3E;
-    &#x3C;script type=&#x22;text/javascript&#x22;&#x3E;// &#x3C;![CDATA[
-        require([&#x22;jquery&#x22;], function($){
-            $(document).ready(function () {
-                $(&#x27;#home-slideshow&#x27;).funslider({
-                    width: 1240,
-                    height: 380,
-                    placeholderPath:&#x27;{{view url=&#x22;Magento_Theme::images/transp.png&#x22;}}&#x27;,
-                    }
-                );
-            });
+&#x3C;div&#x3E;
+    &#x3C;ul class=&#x22;rslides rslides-simple&#x22;&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;&#x3C;img src=&#x22;https://placeholdit.imgix.net/~text?txtsize=95&#x26;txt=Slide1&#x26;w=1240&#x26;h=380&#x26;txttrack=0&#x26;bg=eeeeee&#x26;txtclr=cccccc&#x22; alt=&#x22;&#x22;&#x3E;&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;&#x3C;img src=&#x22;https://placeholdit.imgix.net/~text?txtsize=95&#x26;txt=Slide2&#x26;w=1240&#x26;h=380&#x26;txttrack=0&#x26;bg=cccccc&#x26;txtclr=eeeeee&#x22; alt=&#x22;&#x22;&#x3E;&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;&#x3C;img src=&#x22;https://placeholdit.imgix.net/~text?txtsize=95&#x26;txt=Slide3&#x26;w=1240&#x26;h=380&#x26;txttrack=0&#x26;bg=eeeeee&#x26;txtclr=cccccc&#x22; alt=&#x22;&#x22;&#x3E;&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;&#x3C;img src=&#x22;https://placeholdit.imgix.net/~text?txtsize=95&#x26;txt=Slide4&#x26;w=1240&#x26;h=380&#x26;txttrack=0&#x26;bg=cccccc&#x26;txtclr=eeeeee&#x22; alt=&#x22;&#x22;&#x3E;&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;/ul&#x3E;
+    &#x3C;script type=&#x22;text/javascript&#x22;&#x3E;
+        require([&#x27;jquery&#x27;,&#x27;responsiveslides&#x27;,&#x27;domReady!&#x27;], function($){
+            $(&#x22;.rslides-simple&#x22;).responsiveSlides({ speed: 1000, timeout: 5000 });
         });
-    // ]]&#x3E;&#x3C;/script&#x3E;
+    &#x3C;/script&#x3E;
 &#x3C;/div&#x3E;
-
 </textarea>
 <p><a class="hideHtml" href="#">Sluit htmlcode</a></p>
 </div>
 </div>
-*/ ?>
+
+<h1 class="supporting title">Slideshow met pager</h1>
+
+<div>
+    <ul class="rslides rslides-pager">
+        <li><a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=95&txt=Slide1&w=1240&h=380&txttrack=0&bg=eeeeee&txtclr=cccccc" alt=""></a></li>
+        <li><a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=95&txt=Slide2&w=1240&h=380&txttrack=0&bg=cccccc&txtclr=eeeeee" alt=""></a></li>
+        <li><a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=95&txt=Slide3&w=1240&h=380&txttrack=0&bg=eeeeee&txtclr=cccccc" alt=""></a></li>
+        <li><a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=95&txt=Slide4&w=1240&h=380&txttrack=0&bg=cccccc&txtclr=eeeeee" alt=""></a></li>
+    </ul>
+    <script type="text/javascript">
+        require(['jquery','responsiveslides','domReady!'], function($){
+            $(".rslides-pager").responsiveSlides({ auto: false, pager: true, speed: 1000 });
+        });
+    </script>
+</div>
+
+<br />
+<div class="sourceCode">
+<p><a class="showHtml" style="display: inline;" href="#"><?php echo __('Toon code') ?></a></p>
+<div class="htmlCode moreText">
+<p>Kopie&euml;r &amp; plak de onderstaande code in de html weergave uw CMS pagina of static block in Magento</p>
+<textarea style="padding: .5em;" rows="10" cols="80">
+&#x3C;div&#x3E;
+    &#x3C;ul class=&#x22;rslides rslides-pager&#x22;&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;&#x3C;img src=&#x22;https://placeholdit.imgix.net/~text?txtsize=95&#x26;txt=Slide1&#x26;w=1240&#x26;h=380&#x26;txttrack=0&#x26;bg=eeeeee&#x26;txtclr=cccccc&#x22; alt=&#x22;&#x22;&#x3E;&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;&#x3C;img src=&#x22;https://placeholdit.imgix.net/~text?txtsize=95&#x26;txt=Slide2&#x26;w=1240&#x26;h=380&#x26;txttrack=0&#x26;bg=cccccc&#x26;txtclr=eeeeee&#x22; alt=&#x22;&#x22;&#x3E;&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;&#x3C;img src=&#x22;https://placeholdit.imgix.net/~text?txtsize=95&#x26;txt=Slide3&#x26;w=1240&#x26;h=380&#x26;txttrack=0&#x26;bg=eeeeee&#x26;txtclr=cccccc&#x22; alt=&#x22;&#x22;&#x3E;&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;&#x3C;img src=&#x22;https://placeholdit.imgix.net/~text?txtsize=95&#x26;txt=Slide4&#x26;w=1240&#x26;h=380&#x26;txttrack=0&#x26;bg=cccccc&#x26;txtclr=eeeeee&#x22; alt=&#x22;&#x22;&#x3E;&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;/ul&#x3E;
+    &#x3C;script type=&#x22;text/javascript&#x22;&#x3E;
+        require([&#x27;jquery&#x27;,&#x27;responsiveslides&#x27;,&#x27;domReady!&#x27;], function($){
+            $(&#x22;.rslides-pager&#x22;).responsiveSlides({ auto: false, pager: true, speed: 1000 });
+        });
+    &#x3C;/script&#x3E;
+&#x3C;/div&#x3E;
+</textarea>
+<p><a class="hideHtml" href="#">Sluit htmlcode</a></p>
+</div>
+</div>
+
 
 </section>
 

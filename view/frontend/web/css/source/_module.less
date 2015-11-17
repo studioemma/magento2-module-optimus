@@ -7,55 +7,112 @@
 
 /* css for the example pages */
 
-.supporting.title {
-    background-color: #f9f9f9;
-    border: 1px solid #e0e0e0;
-    padding: 10px;
-    font-size: 14px;
-    margin: 30px 0;
-}
+& when (@media-common = true) {
 
+    .supporting.title {
+        background-color: #f9f9f9;
+        border: 1px solid #e0e0e0;
+        padding: 10px;
+        font-size: 14px;
+        margin: 30px 0;
+    }
+}
 
 /* Html code */
 
-.sourceCode {
-    clear: both;
-    padding: 2em 0;
+& when (@media-common = true) {
+
+    .sourceCode {
+        clear: both;
+        padding: 2em 0;
+    }
+
+    .sourceCode a {
+        background-color: #5fa1de;
+        display: inline-block;
+        color: #fff;
+        padding: .8em 1em;
+        border-radius: 2px;
+        text-decoration: none;
+        border: none;
+    }
+
+    .sourceCode a:hover {
+        background-color: #256eb2;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+    }
+
+    .sourceCode textarea {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 0 1em;
+        border-style: dashed;
+        border-color: #ccc;
+        padding: 1em;
+    }
+
+    .moreText {
+        display: none;
+    }
+
+    .moreText.toggled {
+        display: block !important;
+    }
+
 }
 
-.sourceCode a {
-    background-color: #5fa1de;
-    display: inline-block;
-    color: #fff;
-    padding: .8em 1em;
-    border-radius: 2px;
-    text-decoration: none;
-    border: none;
+
+// Slideshow
+/*! http://responsiveslides.com v1.54 by @viljamis */
+
+& when (@media-common = true) {
+
+    .rslides {
+        position: relative;
+        list-style: none;
+        overflow: hidden;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .rslides li {
+        -webkit-backface-visibility: hidden;
+        position: absolute;
+        display: none;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    .rslides li:first-child {
+        position: relative;
+        display: block;
+        float: left;
+    }
+
+    .rslides img {
+        display: block;
+        height: auto;
+        float: left;
+        width: 100%;
+        border: 0;
+    }
+
+    .rslides_tabs {
+        list-style: none;
+        margin: 0 0 1em;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            margin-right: 1em;
+        }
+    }
 }
 
-.sourceCode a:hover {
-    background-color: #256eb2;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-}
-
-.sourceCode textarea {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 0 1em;
-    border-style: dashed;
-    border-color: #ccc;
-    padding: 1em;
-}
-
-.moreText {
-    display: none;
-}
-
-.moreText.toggled {
-    display: block !important;
-}
 
 
 
