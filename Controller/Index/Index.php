@@ -14,15 +14,21 @@ namespace StudioEmma\Optimus\Controller\Index;
  */
 class Index extends \Magento\Framework\App\Action\Action
 {
-    /** @var \Magento\Framework\View\Result\PageFactory  */
-    protected $resultPageFactory;
+    /** @var \Magento\Framework\View\Page\Config */
+    private $pageConfig;
+
+    /** @var \Magento\Framework\View\Result\PageFactory */
+    private $pageFactory;
+
 
     public function __construct(
         \Magento\Framework\App\Action\Context $context,
-        \Magento\Framework\View\Result\PageFactory $resultPageFactory
+        \Magento\Framework\View\Page\Config $pageConfig,
+        \Magento\Framework\View\Result\PageFactory $pageFactory
     ) {
-        $this->resultPageFactory = $resultPageFactory;
         parent::__construct($context);
+        $this->pageConfig = $pageConfig;
+        $this->pageFactory = $pageFactory;
     }
     /**
      * Load the page defined in view/frontend/layout/samplenewpage_index_index.xml
@@ -31,9 +37,8 @@ class Index extends \Magento\Framework\App\Action\Action
      */
     public function execute()
     {
-        $page = $this->resultPageFactory->create();
-        $page->getConfig()->addBodyClass('page-content-examples');
-        $page->getConfig()->addBodyClass('cms-page-view');
-        return $page;
+        $this->pageConfig->addBodyClass('page-content-examples');
+        $this->pageConfig->addBodyClass('cms-page-view');
+        return $this->pageFactory->create();
     }
 }
