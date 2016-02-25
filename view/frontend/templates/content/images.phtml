@@ -136,7 +136,7 @@
 </div>
 
 <h1 class="supporting title">Video</h1>
-<p>Standaard vult de video de beschikbare breedte op de pagina. Plaats hem in een layoutvorm om kleiner te houden, zie 2de voorbeeld. Je kan de lege kolommen ook opvullen met tekst uiteraard
+<p>Standaard vult de video de beschikbare breedte op de pagina. Plaats hem in een layoutvorm om kleiner te houden, zie 2de voorbeeld. Je kan de lege kolommen ook opvullen met tekst uiteraard</p>
 
 <div class="video-container">
     <div class="video-container"><iframe allowfullscreen="" frameborder="0" height="480" scrolling="no" src="https://www.youtube.com/embed/LTvFsTbyILg" width="640"></iframe></div>
@@ -149,7 +149,7 @@
         <textarea style="padding: .5em;" rows="10" cols="80">
 &#x3C;div class=&#x22;video-container&#x22;&#x3E;
     &#x3C;div class=&#x22;video-container&#x22;&#x3E;&#x3C;iframe allowfullscreen=&#x22;&#x22; frameborder=&#x22;0&#x22; height=&#x22;480&#x22; scrolling=&#x22;no&#x22; src=&#x22;https://www.youtube.com/embed/LTvFsTbyILg&#x22; width=&#x22;640&#x22;&#x3E;&#x3C;/iframe&#x3E;&#x3C;/div&#x3E;
-&#x3C;/div&#x3E;            
+&#x3C;/div&#x3E;
         </textarea>
         <p><a class="hideHtml" href="#">Sluit htmlcode</a></p>
     </div>
@@ -326,6 +326,71 @@
 </div>
 </div>
 
+<h1 class="supporting title">Gallery in lightbox</h1>
+
+<p>Om de afbeelding groter weer te geven wordt de 'small' in het pad van de thumbnail vervangen door 'large'. Dus je kan 2 folders gebruiken 1 'large' en 1 'small'. Je kan ook het '#' vervangen door een ander pad. Dan wordt het pad naar de grote afbeelding niet automatisch vervangen.</p>
+
+<div>
+<div class="se-grid cf">
+    <div class="se-col se-col3-5">
+        <p>Lorem ipsum et dolor sit amet, consectetur adipiscing elit. Integer imperdiet lacus eget turpis accumsan euismod. Donec lectus enim, semper vestibulum nisi at, condimentum ultricies lectus. Sed elementum elit diam, vitae dapibus dui bibendum nec. Cras ut ipsum eu enim dignissim dignissim. Fusce tempor convallis nibh, sagittis eleifend est fringilla sit amet. In id dictum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras eget gravida orci, vitae feugiat felis. Curabitur at erat nec lectus faucibus tempus ac bibendum nulla. Cras ut neque nec magna semper euismod sit amet pharetra leo. Duis convallis quis leo nec ornare. Phasellus auctor mauris eget mi lacinia sollicitudin. Ut sit amet dui tortor.</p>
+    </div>
+    <div class="se-col se-col2-5">
+        <div class="popup-gallery">
+            <div>
+                <a href="#" title="Taxi"><img src="/static/frontend/Studioemma/optimus/nl_NL/StudioEmma_Optimus/img/popup-gallery/small/city-a.jpg" /></a>
+            </div>
+            <div class="colm-grid non-responsive">
+                <div class="colm1-3">
+                    <a href="#" title="Horses"><img src="/static/frontend/Studioemma/optimus/nl_NL/StudioEmma_Optimus/img/popup-gallery/small/city-b.jpg" /></a>
+                </div>
+                <div class="colm1-3">
+                    <a href="#" title="Dome"><img src="/static/frontend/Studioemma/optimus/nl_NL/StudioEmma_Optimus/img/popup-gallery/small/city-c.jpg" /></a>
+                </div>
+                <div class="colm1-3">
+                    <a href="#" title="Box car"><img src="/static/frontend/Studioemma/optimus/nl_NL/StudioEmma_Optimus/img/popup-gallery/small/city-d.jpg" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<br />
+<div class="sourceCode">
+<p><a class="showHtml" style="display: inline;" href="#"><?php echo __('Toon code') ?></a></p>
+<div class="htmlCode moreText">
+<p>Kopie&euml;r &amp; plak de onderstaande code in de html weergave uw CMS pagina of static block in Magento</p>
+<textarea style="padding: .5em;" rows="10" cols="80">
+&lt;div class="se-grid cf"&gt;
+    &lt;div class="se-col se-col3-5"&gt;
+        &lt;p&gt;Lorem ipsum et dolor sit amet, consectetur adipiscing elit. Integer imperdiet lacus eget turpis accumsan euismod. Donec lectus enim, semper vestibulum nisi at, condimentum ultricies lectus. Sed elementum elit diam, vitae dapibus dui bibendum nec. Cras ut ipsum eu enim dignissim dignissim. Fusce tempor convallis nibh, sagittis eleifend est fringilla sit amet. In id dictum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras eget gravida orci, vitae feugiat felis. Curabitur at erat nec lectus faucibus tempus ac bibendum nulla. Cras ut neque nec magna semper euismod sit amet pharetra leo. Duis convallis quis leo nec ornare. Phasellus auctor mauris eget mi lacinia sollicitudin. Ut sit amet dui tortor.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="se-col se-col2-5"&gt;
+        &lt;div class="popup-gallery"&gt;
+            &lt;div&gt;
+                &lt;a href="#" title="Taxi"&gt;&lt;img src="/static/frontend/Studioemma/optimus/nl_NL/StudioEmma_Optimus/img/popup-gallery/small/city-a.jpg" /&gt;&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="colm-grid non-responsive"&gt;
+                &lt;div class="colm1-3"&gt;
+                    &lt;a href="#" title="Horses"&gt;&lt;img src="/static/frontend/Studioemma/optimus/nl_NL/StudioEmma_Optimus/img/popup-gallery/small/city-b.jpg" /&gt;&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class="colm1-3"&gt;
+                    &lt;a href="#" title="Dome"&gt;&lt;img src="/static/frontend/Studioemma/optimus/nl_NL/StudioEmma_Optimus/img/popup-gallery/small/city-c.jpg" /&gt;&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class="colm1-3"&gt;
+                    &lt;a href="#" title="Box car"&gt;&lt;img src="/static/frontend/Studioemma/optimus/nl_NL/StudioEmma_Optimus/img/popup-gallery/small/city-d.jpg" /&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</textarea>
+<p><a class="hideHtml" href="#">Sluit htmlcode</a></p>
+</div>
+</div>
+
+
 
 </section>
 
@@ -352,6 +417,6 @@ require(["jquery"], function($){
     });
 });
 
-</script> 
+</script>
 
 
