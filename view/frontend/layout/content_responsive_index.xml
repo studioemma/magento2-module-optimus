@@ -8,6 +8,25 @@
     <body>
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive.phtml" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive/responsive-show-desktop.phtml" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive/responsive-show-tablet.phtml" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive/responsive-show-smallscreen.phtml" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive/responsive-show-phone.phtml" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive/responsive-hide-all.phtml" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive/responsive-hide-desktop.phtml" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive/responsive-hide-extralarge.phtml" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive/responsive-hide-large.phtml" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive/responsive-hide-medium.phtml" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive/responsive-hide-mobile.phtml" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive/responsive-hide-phone.phtml" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive/responsive-hide-smallscreen.phtml" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive/responsive-hide-tablet.phtml" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive/responsive-hide-widescreen.phtml" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive/responsive-vertical-show-extralarge.phtml" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive/responsive-vertical-show-large.phtml" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive/responsive-vertical-show-medium.phtml" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive/responsive-vertical-show-small.phtml" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive/responsive-vertical-hide-small.phtml" />
         </referenceContainer>
     </body>
 </page>

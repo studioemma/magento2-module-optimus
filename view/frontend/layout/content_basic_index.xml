@@ -13,7 +13,13 @@
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/basic.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/basic.phtml" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/basic/titles.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/basic/quote.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/basic/lists.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/basic/dividers.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/basic/tables.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/basic/messages.phtml"/>
         </referenceContainer>
     </body>
 </page>

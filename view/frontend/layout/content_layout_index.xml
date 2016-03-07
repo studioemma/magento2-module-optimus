@@ -14,6 +14,15 @@
     <body>
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout/columns-textonly.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout/columns-empty.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout/columns-text-images.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout/callouts.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout/columns-verticalcenter.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout/columns-maxwidth.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout/centered-icon.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout/pagewide-invert.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout/pagewide-invert-ta-center.phtml"/>
         </referenceContainer>
     </body>
 </page>

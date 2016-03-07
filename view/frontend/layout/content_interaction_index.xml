@@ -15,6 +15,8 @@
     <body>
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/interaction.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/interaction/accordeon.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/interaction/toggle.phtml"/>
         </referenceContainer>
     </body>
 </page>

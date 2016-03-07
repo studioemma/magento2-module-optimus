@@ -14,6 +14,17 @@
     <body>
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/inline-wrap.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/pagewide.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/50.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/33.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/50-nospace.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/video.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/video-lightbox.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/slideshow.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/slideshow-pager.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/gallery-lightbox.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/gallery-lightbox-alt.phtml"/>
         </referenceContainer>
     </body>
 </page>
