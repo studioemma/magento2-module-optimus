@@ -13,18 +13,18 @@
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images.phtml"/>
-            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/inline-wrap.phtml"/>
-            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/pagewide.phtml"/>
-            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/50.phtml"/>
-            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/33.phtml"/>
-            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/50-nospace.phtml"/>
-            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/video.phtml"/>
-            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/video-lightbox.phtml"/>
-            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/slideshow.phtml"/>
-            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/slideshow-pager.phtml"/>
-            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/gallery-lightbox.phtml"/>
-            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/gallery-lightbox-alt.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images.phtml" name="optimus-content-images" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/inline-wrap.phtml" name="optimus-content-images-inline-wrap" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/pagewide.phtml" name="optimus-content-images-pagewide" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/50.phtml" name="optimus-content-images-50" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/33.phtml" name="optimus-content-images-33" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/50-nospace.phtml" name="optimus-content-images-50-nospace" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/video.phtml" name="optimus-content-images-video" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/video-lightbox.phtml" name="optimus-content-images-video-lightbox" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/slideshow.phtml" name="optimus-content-images-slideshow" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/slideshow-pager.phtml" name="optimus-content-images-slideshow-pager" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/gallery-lightbox.phtml" name="optimus-content-images-gallery-lightbox" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/gallery-lightbox-alt.phtml" name="optimus-content-images-gallery-lightbox-alt" />
         </referenceContainer>
     </body>
 </page>
