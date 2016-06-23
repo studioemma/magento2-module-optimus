@@ -13,6 +13,7 @@ All html is valid & already provided with the necessary RWD styling.
 - `{base_url}/content/layout`: shows all possible layouts (grids) with text & images
 - `{base_url}/content/interaction` : shows content with FAQ style accordion, show more/less text etc.
 - `{base_url}/content/images` : shows all variaties of images they can use on their site. Page wide, floating in text, left & right columns.
+- `{base_url}/content/specific` : shows all specific content blocks a client can use on their site. They are not general blocks, specific to the customer's needs
 
 When applicable, an option is provided to copy/paste the html code needed to obtain these examples. These need to be copied over to the wysiwyg editor in Magento and afterwards, the client can change all texts & images.
 
