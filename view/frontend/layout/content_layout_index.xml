@@ -12,6 +12,12 @@
         </title>
     </head>
     <body>
+        <!-- NORMAL HEAD TITLE IS NOT TRANSLATED -->
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Layouts for content</argument>
+            </action>
+        </referenceBlock>       
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout.phtml" name="optimus-content-layout" />
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout/columns-textonly.phtml" name="optimus-content-layout-columns-textonly" />

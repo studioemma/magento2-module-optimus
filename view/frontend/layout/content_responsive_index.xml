@@ -6,6 +6,12 @@
         </title>
     </head>
     <body>
+        <!-- NORMAL HEAD TITLE IS NOT TRANSLATED -->
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Classes for responsive</argument>
+            </action>
+        </referenceBlock>       
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive.phtml" name="optimus-content-responsive" />
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive/responsive-show-desktop.phtml" name="optimus-content-responsive-show-desktop" />

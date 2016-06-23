@@ -10,6 +10,12 @@
         <title>Styling for content - Index</title>
     </head>
     <body>
+    	<!-- NORMAL HEAD TITLE IS NOT TRANSLATED -->
+		<referenceBlock name="page.main.title">
+		    <action method="setPageTitle">
+		        <argument translate="true" name="title" xsi:type="string">Styling for content - Index</argument>
+		    </action>
+		</referenceBlock>    	
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/index.phtml"/>
         </referenceContainer>

@@ -12,6 +12,12 @@
         </title>
     </head>
     <body>
+        <!-- NORMAL HEAD TITLE IS NOT TRANSLATED -->
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Images and video within content</argument>
+            </action>
+        </referenceBlock>       
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images.phtml" name="optimus-content-images" />
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/inline-wrap.phtml" name="optimus-content-images-inline-wrap" />

@@ -13,6 +13,12 @@
         <!--<link src="SE_ContentLayout::js/content.js" />-->
     </head>
     <body>
+        <!-- NORMAL HEAD TITLE IS NOT TRANSLATED -->
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Interaction examples</argument>
+            </action>
+        </referenceBlock>       
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/interaction.phtml" name="optimus-content-interaction" />
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/interaction/accordeon.phtml" name="optimus-content-interaction-accordeon" />

@@ -12,6 +12,12 @@
         </title>
     </head>
     <body>
+        <!-- NORMAL HEAD TITLE IS NOT TRANSLATED -->
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Base styling for content</argument>
+            </action>
+        </referenceBlock>       
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/basic.phtml" name="optimus-content-basic" />
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/basic/titles.phtml" name="optimus-content-basic-titles" />
