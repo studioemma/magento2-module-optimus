@@ -39,6 +39,7 @@ class Index extends \Magento\Framework\App\Action\Action
     {
         $this->pageConfig->addBodyClass('page-content-examples');
         $this->pageConfig->addBodyClass('cms-page-view');
+        $this->pageConfig->addBodyClass('cms-page');
         return $this->pageFactory->create();
     }
 }
