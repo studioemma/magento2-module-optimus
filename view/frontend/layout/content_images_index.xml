@@ -17,7 +17,7 @@
             <action method="setPageTitle">
                 <argument translate="true" name="title" xsi:type="string">Images and video within content</argument>
             </action>
-        </referenceBlock>       
+        </referenceBlock>
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images.phtml" name="optimus-content-images" />
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/inline-wrap.phtml" name="optimus-content-images-inline-wrap" />
@@ -31,6 +31,7 @@
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/slideshow-pager.phtml" name="optimus-content-images-slideshow-pager" />
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/gallery-lightbox.phtml" name="optimus-content-images-gallery-lightbox" />
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/gallery-lightbox-alt.phtml" name="optimus-content-images-gallery-lightbox-alt" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/flexslider.phtml" name="optimus-content-images-flexslider" />
         </referenceContainer>
     </body>
 </page>
