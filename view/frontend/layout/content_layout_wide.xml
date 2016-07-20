@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>
+            Layouts for wide content
+        </title>
+    </head>
+    <body>
+        <referenceBlock name="page.main.title" remove="true" />
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout-wide.phtml" name="optimus-content-layout-wide" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout/page-wide-content.phtml" name="optimus-content-layout-page-wide-content" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout/pagewide-invert.phtml" name="optimus-content-layout-pagewide-invert" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout/pagewide-invert-ta-center.phtml" name="optimus-content-layout-pagewide-invert-ta-center" />
+            <!-- make the page wide -->
+            <block class="StudioEmma\Optimus\Block\PageWideContent" name="test.paragraph" template="Magento_Theme::paragraph.phtml">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true"> </argument>
+                    <argument name="css_class" xsi:type="string">hidden</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

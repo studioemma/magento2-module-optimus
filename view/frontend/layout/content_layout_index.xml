@@ -17,7 +17,7 @@
             <action method="setPageTitle">
                 <argument translate="true" name="title" xsi:type="string">Layouts for content</argument>
             </action>
-        </referenceBlock>       
+        </referenceBlock>
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout.phtml" name="optimus-content-layout" />
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout/columns-textonly.phtml" name="optimus-content-layout-columns-textonly" />
@@ -27,8 +27,6 @@
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout/columns-verticalcenter.phtml" name="optimus-content-layout-columns-verticalcenter" />
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout/columns-maxwidth.phtml" name="optimus-content-layout-columns-maxwidth" />
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout/centered-icon.phtml" name="optimus-content-layout-centered-icon" />
-            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout/pagewide-invert.phtml" name="optimus-content-layout-pagewide-invert" />
-            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/layout/pagewide-invert-ta-center.phtml" name="optimus-content-layout-pagewide-invert-ta-center" />
         </referenceContainer>
     </body>
 </page>

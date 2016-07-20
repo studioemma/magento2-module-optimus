@@ -1,0 +1,33 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<div class="content-wrapper">
+    <p class="supporting"><a href="/content"><?php echo __('Back to overview') ?></a></p>
+    <h4 class="supporting">Dit document beschrijft de pagina brede layoutvormen (kolommen) die je kan inzetten.</h4>
+</div>
+
+<script type="text/javascript">
+require(["jquery"], function($){
+    $(document).ready(function ($) {
+        // ==============================================
+        // Toggle html example codes
+        // ==============================================
+
+        $(".showHtml").click(function() {
+            $(this).parent().next('.htmlCode').addClass('toggled');
+            $(this).parent().next('.htmlCode').find('textarea').select();
+            $(this).hide();
+            return false;
+        });
+
+        $(".hideHtml").click(function() {
+            $(this).parent().parent().removeClass('toggled');
+            $(this).parent().parent().prev().find('.showHtml').show();
+            return false;
+        });
+    });
+});
+</script>
