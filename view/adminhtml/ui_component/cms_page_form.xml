@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="search_engine_optimisation">
+        <field name="og_image" sortOrder="50" formElement="fileUploader">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="source" xsi:type="string">page</item>
+                </item>
+            </argument>
+            <settings>
+                <elementTmpl>ui/form/element/uploader/uploader</elementTmpl>
+                <dataType>string</dataType>
+                <label translate="true">OG Image</label>
+                <visible>true</visible>
+                <required>false</required>
+            </settings>
+            <formElements>
+                <fileUploader>
+                    <settings>
+                        <required>false</required>
+                        <uploaderConfig>
+                            <param xsi:type="url" name="url" path="catalog/category_image/upload"/>
+                        </uploaderConfig>
+                        <previewTmpl>Magento_Catalog/image-preview</previewTmpl>
+                    </settings>
+                </fileUploader>
+            </formElements>
+        </field>
+    </fieldset>
+</form>
