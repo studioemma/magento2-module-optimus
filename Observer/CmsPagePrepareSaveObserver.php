@@ -25,10 +25,8 @@ class CmsPagePrepareSaveObserver implements ObserverInterface
                         'Magento\Catalog\CategoryImageUpload'
                     );
                     $imageUploader->moveFileFromTmp($data['og_image'][0]['file']);
-                    $data['og_image'] = $data['og_image'][0]['name'];
-                } else {
-                    unset($data['og_image']);
                 }
+                $data['og_image'] = $data['og_image'][0]['name'];
             }
             $model->setData('og_image', $data['og_image']);
         }
