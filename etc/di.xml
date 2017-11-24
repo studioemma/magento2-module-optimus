@@ -3,4 +3,9 @@
     <type name="Magento\Cms\Model\Page\DataProvider">
         <plugin name="SEPageDataProviderPlugin" type="StudioEmma\Optimus\Plugin\PageDataProviderPlugin" sortOrder="1" />
     </type>
+    <type name="StudioEmma\Optimus\Observer\CmsPagePrepareSaveObserver">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">Magento\Catalog\CategoryImageUpload</argument>
+        </arguments>
+    </type>
 </config>

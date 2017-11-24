@@ -30,6 +30,7 @@ class Page extends \Magento\Framework\View\Element\Template
      * @param \Magento\Cms\Model\Page $page
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      * @param \Magento\Framework\Filesystem $filesystem
+     * @param \Magento\Catalog\Model\Category\FileInfo $fileInfo
      * @param array $data
      */
     public function __construct(

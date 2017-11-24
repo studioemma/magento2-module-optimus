@@ -7,8 +7,18 @@ use Magento\Framework\Event\ObserverInterface;
 class CmsPagePrepareSaveObserver implements ObserverInterface
 {
 
-    public function __construct()
-    {
+    /**
+     *  @var Magento\Catalog\Model\ImageUploader
+     */
+    protected $_imageUploader;
+
+    /**
+     * @param \Magento\Catalog\Model\ImageUploader $imageUploader
+     */
+    public function __construct(
+        \Magento\Catalog\Model\ImageUploader $imageUploader
+    ){
+        $this->_imageUploader = $imageUploader;
     }
 
     public function execute(\Magento\Framework\Event\Observer $observer)
@@ -21,10 +31,7 @@ class CmsPagePrepareSaveObserver implements ObserverInterface
                 $data['og_image'] = null;
             } else {
                 if (isset($data['og_image'][0]['name']) && isset($data['og_image'][0]['tmp_name'])) {
-                    $imageUploader = \Magento\Framework\App\ObjectManager::getInstance()->get(
-                        'Magento\Catalog\CategoryImageUpload'
-                    );
-                    $imageUploader->moveFileFromTmp($data['og_image'][0]['file']);
+                    $this->_imageUploader->moveFileFromTmp($data['og_image'][0]['file']);
                 }
                 $data['og_image'] = $data['og_image'][0]['name'];
             }
