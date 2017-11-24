@@ -21,6 +21,11 @@ class Page extends \Magento\Framework\View\Element\Template
     protected $_filesystem;
 
     /**
+     *  @var \Magento\Catalog\Model\Category\FileInfo
+     */
+    protected $_fileInfo;
+
+    /**
      * @param \Magento\Framework\View\Element\Template\Context $context
      * @param \Magento\Cms\Model\Page $page
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
@@ -32,11 +37,13 @@ class Page extends \Magento\Framework\View\Element\Template
         \Magento\Cms\Model\Page $page,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
         \Magento\Framework\Filesystem $filesystem,
+        \Magento\Catalog\Model\Category\FileInfo $fileInfo,
         $data = []
     ) {
         $this->_page = $page;
         $this->_storeManager = $storeManager;
         $this->_filesystem = $filesystem;
+        $this->_fileInfo = $fileInfo;
         parent::__construct($context, $data);
     }
 
@@ -66,8 +73,7 @@ class Page extends \Magento\Framework\View\Element\Template
         $image = $this->_page->getData('og_image');
         if ($image) {
             if (is_string($image)) {
-                $fileInfo = \Magento\Framework\App\ObjectManager::getInstance()->get('Magento\Catalog\Model\Category\FileInfo');
-                $type = $fileInfo->getMimeType($image);
+                $type = $this->_fileInfo->getMimeType($image);
             }
         }
         return $type;
