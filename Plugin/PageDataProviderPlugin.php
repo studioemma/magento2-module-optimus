@@ -4,8 +4,10 @@ namespace StudioEmma\Optimus\Plugin;
 
 class PageDataProviderPlugin
 {
-
-    private $_storeManager;
+    /**
+     * @var \Magento\Store\Model\StoreManagerInterface
+     */
+    protected $_storeManager;
 
     public function __construct(\Magento\Store\Model\StoreManagerInterface $storeManager) {
         $this->_storeManager = $storeManager;
