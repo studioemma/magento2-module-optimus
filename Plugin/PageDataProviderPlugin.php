@@ -9,8 +9,17 @@ class PageDataProviderPlugin
      */
     protected $_storeManager;
 
-    public function __construct(\Magento\Store\Model\StoreManagerInterface $storeManager) {
+    /**
+     * @var \Magento\Catalog\Model\Category\FileInfo
+     */
+    protected $_fileInfo;
+
+    public function __construct(
+        \Magento\Store\Model\StoreManagerInterface $storeManager,
+        \Magento\Catalog\Model\Category\FileInfo $fileInfo
+    ) {
         $this->_storeManager = $storeManager;
+        $this->_fileInfo = $fileInfo;
     }
 
     public function afterGetData(\Magento\Cms\Model\Page\DataProvider $subject, $results)
@@ -18,12 +27,11 @@ class PageDataProviderPlugin
         if (!empty($results)) {
             foreach ($results as &$result) {
                 if (!empty($result['og_image'])) {
-                    $fileInfo = \Magento\Framework\App\ObjectManager::getInstance()->get('Magento\Catalog\Model\Category\FileInfo');
                     $url = $this->_storeManager->getStore()->getBaseUrl(
                         \Magento\Framework\UrlInterface::URL_TYPE_MEDIA
                     ) . 'catalog/category/' . $result['og_image'];
-                    $stat = $fileInfo->getStat($result['og_image']);
-                    $mime = $fileInfo->getMimeType($result['og_image']);
+                    $stat = $this->_fileInfo->getStat($result['og_image']);
+                    $mime = $this->_fileInfo->getMimeType($result['og_image']);
                     $ogImage = array();
                     $ogImage[0] = array();
                     $ogImage[0]['name'] = $result['og_image'];
