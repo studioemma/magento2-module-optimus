@@ -26,11 +26,17 @@ class Page extends \Magento\Framework\View\Element\Template
     protected $_fileInfo;
 
     /**
+     *  @var \Magento\Framework\View\Page\Config
+     */
+    protected $_pageConfig;
+
+    /**
      * @param \Magento\Framework\View\Element\Template\Context $context
      * @param \Magento\Cms\Model\Page $page
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      * @param \Magento\Framework\Filesystem $filesystem
      * @param \Magento\Catalog\Model\Category\FileInfo $fileInfo
+     * @param \Magento\Framework\View\Page\Config $pageConfig
      * @param array $data
      */
     public function __construct(
@@ -39,13 +45,41 @@ class Page extends \Magento\Framework\View\Element\Template
         \Magento\Store\Model\StoreManagerInterface $storeManager,
         \Magento\Framework\Filesystem $filesystem,
         \Magento\Catalog\Model\Category\FileInfo $fileInfo,
+        \Magento\Framework\View\Page\Config $pageConfig,
         $data = []
     ) {
         $this->_page = $page;
         $this->_storeManager = $storeManager;
         $this->_filesystem = $filesystem;
         $this->_fileInfo = $fileInfo;
+        $this->_pageConfig = $pageConfig;
         parent::__construct($context, $data);
+    }
+
+    /**
+     * @return string
+     */
+    public function getMetaTitle()
+    {
+        $title = '';
+        $metaTitle = strip_tags($this->_pageConfig->getTitle()->getShort());
+        if (!empty($metaTitle)) {
+            $title = $metaTitle;
+        }
+        return $title;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMetaDescription()
+    {
+        $description = '';
+        $metaDescription = strip_tags($this->_pageConfig->getDescription());
+        if (!empty($metaDescription)) {
+            $description = $metaDescription;
+        }
+        return $description;
     }
 
     /**
