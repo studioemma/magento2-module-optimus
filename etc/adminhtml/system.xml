@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="socialmedia" translate="label" sortOrder="100">
+            <label>Social media</label>
+        </tab>
+        <section id="socialmediageneral" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>General</label>
+            <tab>socialmedia</tab>
+            <resource>StudioEmma_Optimus::socialmedia_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="1">
+                <label>General configuration</label>
+                <field id="enablesharing" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable sharing</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enablefollowlinks" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable follow links</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="addthis" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>AddThis code</label>
+                <field id="addthisinstallcode" translate="label" type="textarea" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Install code</label>
+                </field>
+                <field id="addthisinlinesharebuttons" translate="label" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Inline share buttons code</label>
+                </field>
+            </group>
+        </section>
+        <section id="socialmediachannels" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Channels</label>
+            <tab>socialmedia</tab>
+            <resource>StudioEmma_Optimus::socialmedia_config</resource>
+            <group id="facebookchannel" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Facebook</label>
+                <field id="enablefacebooksharing" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Facebook sharing</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enablefacebookfollowlink" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Facebook follow link</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="facebookfollowlink" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Facebook follow link</label>
+                    <comment>A link to your company's Facebook page or profile.</comment>
+                </field>
+                <field id="facebookfollowlinkalt" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Facebook follow link alt</label>
+                    <comment>Hover text for follow link.</comment>
+                </field>
+                <field id="facebookicon" type="image" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Facebook icon</label>
+                    <backend_model>StudioEmma\Optimus\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">socialmedia</upload_dir>
+                    <base_url type="media" scope_info="1">socialmedia</base_url>
+                </field>
+            </group>
+            <group id="twitterchannel" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Twitter</label>
+                <field id="enabletwittersharing" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Twitter sharing</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enabletwitterfollowlink" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Twitter follow link</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="twitterfollowlink" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Twitter follow link</label>
+                    <comment>A link to your company's twitter profile.</comment>
+                </field>
+                <field id="twitterfollowlinkalt" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Twitter follow link alt</label>
+                    <comment>Hover text for follow link.</comment>
+                </field>
+                <field id="twittericon" type="image" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Twitter icon</label>
+                    <backend_model>StudioEmma\Optimus\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">socialmedia</upload_dir>
+                    <base_url type="media" scope_info="1">socialmedia</base_url>
+                </field>
+            </group>
+            <group id="instagramchannel" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Instagram</label>
+                <field id="enableinstagramfollowlink" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Instagram follow link</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="instagramfollowlink" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Instagram follow link</label>
+                    <comment>A link to your company's Instagram profile.</comment>
+                </field>
+                <field id="instagramfollowlinkalt" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Instagram follow link alt</label>
+                    <comment>Hover text for follow link.</comment>
+                </field>
+                <field id="instagramicon" type="image" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Instagram icon</label>
+                    <backend_model>StudioEmma\Optimus\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">socialmedia</upload_dir>
+                    <base_url type="media" scope_info="1">socialmedia</base_url>
+                </field>
+            </group>
+            <group id="linkedinchannel" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Linkedin</label>
+                <field id="enablelinkedinsharing" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Linkedin sharing</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enablelinkedinfollowlink" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Linkedin follow link</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="linkedinfollowlink" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Linkedin follow link</label>
+                    <comment>A link to your company's Linkedin profile.</comment>
+                </field>
+                <field id="linkedinfollowlinkalt" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Linkedin follow link alt</label>
+                    <comment>Hover text for follow link.</comment>
+                </field>
+                <field id="linkedinicon" type="image" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Linkedin icon</label>
+                    <backend_model>StudioEmma\Optimus\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">socialmedia</upload_dir>
+                    <base_url type="media" scope_info="1">socialmedia</base_url>
+                </field>
+            </group>
+            <group id="youtubechannel" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Youtube</label>
+                <field id="enableyoutubefollowlink" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Youtube follow link</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="youtubefollowlink" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Youtube follow link</label>
+                    <comment>A link to your company's Youtube Channel.</comment>
+                </field>
+                <field id="youtubefollowlinkalt" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Youtube follow link alt</label>
+                    <comment>Hover text for follow link.</comment>
+                </field>
+                <field id="youtubeicon" type="image" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Youtube icon</label>
+                    <backend_model>StudioEmma\Optimus\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">socialmedia</upload_dir>
+                    <base_url type="media" scope_info="1">socialmedia</base_url>
+                </field>
+            </group>
+            <group id="pinterestchannel" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Pinterest</label>
+                <field id="enablepinterestsharing" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Pinterest sharing</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enablepinterestfollowlink" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Pinterest follow link</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="pinterestfollowlink" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Pinterest follow link</label>
+                    <comment>A link to your company's Pinterest profile.</comment>
+                </field>
+                <field id="pinterestfollowlinkalt" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Pinterest follow link alt</label>
+                    <comment>Hover text for follow link.</comment>
+                </field>
+                <field id="pinteresticon" type="image" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Pinterest icon</label>
+                    <backend_model>StudioEmma\Optimus\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">socialmedia</upload_dir>
+                    <base_url type="media" scope_info="1">socialmedia</base_url>
+                </field>
+            </group>
+            <group id="googlepluschannel" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Google+</label>
+                <field id="enablegoogleplussharing" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Google+ sharing</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enablegoogleplusfollowlink" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Google+ follow link</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="googleplusfollowlink" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Google+ follow link</label>
+                    <comment>A link to your company's Google+ profile.</comment>
+                </field>
+                <field id="googleplusfollowlinkalt" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Google+ follow link alt</label>
+                    <comment>Hover text for follow link.</comment>
+                </field>
+                <field id="googleplusicon" type="image" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Google+ icon</label>
+                    <backend_model>StudioEmma\Optimus\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">socialmedia</upload_dir>
+                    <base_url type="media" scope_info="1">socialmedia</base_url>
+                </field>
+            </group>
+            <group id="vimeochannel" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Vimeo</label>
+                <field id="enablevimeofollowlink" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Vimeo follow link</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="vimeofollowlink" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Vimeo follow link</label>
+                    <comment>A link to your company's Vimeo profile.</comment>
+                </field>
+                <field id="vimeofollowlinkalt" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Vimeo follow link alt</label>
+                    <comment>Hover text for follow link.</comment>
+                </field>
+                <field id="vimeoicon" type="image" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Vimeo icon</label>
+                    <backend_model>StudioEmma\Optimus\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">socialmedia</upload_dir>
+                    <base_url type="media" scope_info="1">socialmedia</base_url>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
