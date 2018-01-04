@@ -1,0 +1,16 @@
+<?php
+if ($block->isEnabled()):
+    $qty_options = $block->getQtyOptions();
+?>
+<select class="select-qty" data-mage-init='{"selectqty": {}}'>
+    <?php if (!in_array($block->getQty(), $qty_options)): ?>
+        <option value="<?= $block->getQty() ?>"><?= $block->getQty() ?></option>
+        <option disabled>──────────</option>
+    <?php endif; ?>
+    <?php for ($i=0; $i < count($qty_options); $i++): ?>
+        <option value="<?= $qty_options[$i] ?>" <?php if ($qty_options[$i] == $block->getQty()) { echo 'selected=selected'; } ?>><?= $qty_options[$i] ?></option>
+    <?php endfor; ?>
+    <option disabled>──────────</option>
+    <option value="more"><?= __('More') ?></option>
+</select>
+<?php endif; ?>

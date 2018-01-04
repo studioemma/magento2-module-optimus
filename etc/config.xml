@@ -58,5 +58,13 @@
                 <vimeofollowlinkalt></vimeofollowlinkalt>
             </vimeochannel>
         </socialmediachannels>
+        <checkout>
+            <cart>
+                <select_qty_enabled>1</select_qty_enabled>
+                <select_qty_options>1-5</select_qty_options>
+                <number_of_items_mobile_cart>3</number_of_items_mobile_cart>
+                <show_edit_button>1</show_edit_button>
+            </cart>
+        </checkout>
     </default>
 </config>

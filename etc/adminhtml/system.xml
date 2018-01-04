@@ -224,5 +224,26 @@
                 </field>
             </group>
         </section>
+        <!-- select-qty options -->
+        <section id="checkout">
+            <group id="cart">
+                <field id="select_qty_enabled" translate="label" type="select" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Qty Select Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="select_qty_options" translate="label" type="text" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Qty Select Options</label>
+                    <comment>Format: 1-5,6,12</comment>
+                </field>
+                <field id="number_of_items_mobile_cart" translate="label" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Number of Items Mobile Cart</label>
+                    <comment>Format: 3</comment>
+                </field>
+                <field id="show_edit_button" translate="label" type="select" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Edit Button</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
     </system>
 </config>
