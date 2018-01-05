@@ -71,9 +71,35 @@
         text-align: center;
     }
 
+    .c-cart-more-button {
+        .lib-button(
+            @_button-padding: 7px 0 7px 15px,
+            @_button-icon-use: true,
+            @_button-font-content: @icon-down,
+            @_button-icon-font-size: 32px,
+            @_button-icon-font-line-height: 16px,
+            @_button-icon-font-position: after
+        );
+    }
+
+    .c-cart-less-button {
+        .lib-button(
+            @_button-padding: 7px 0 7px 15px,
+            @_button-icon-use: true,
+            @_button-font-content: @icon-up,
+            @_button-icon-font-size: 32px,
+            @_button-icon-font-line-height: 16px,
+            @_button-icon-font-position: after
+        );
+    }
+
     #cart-count-info {
         margin: 2rem 0;
         text-align: center;
+    }
+
+    .form.form-cart {
+        margin-bottom: 4rem;
     }
 }
 
