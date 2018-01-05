@@ -1,0 +1,11 @@
+<div data-bind="scope: 'cartCountInfo'" id="cart-count-info">
+    <p><span data-bind="text: cartCountInfoText"></span></p>
+</div>
+
+<script type="text/x-magento-init">
+{
+    "#cart-count-info": {
+        "Magento_Ui/js/core/app": <?php echo $block->getJsLayout();?>
+    }
+}
+</script>

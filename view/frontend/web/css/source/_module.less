@@ -70,4 +70,17 @@
         margin: 2rem 0;
         text-align: center;
     }
+
+    #cart-count-info {
+        margin: 2rem 0;
+        text-align: center;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    .c-checkout-cart-button-top,
+    #cart-count-info {
+        display: none;
+    }
 }

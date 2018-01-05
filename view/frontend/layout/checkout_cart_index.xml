@@ -16,6 +16,17 @@
             <container name="checkout.cart.button.top.wrapper" htmlTag="div" htmlClass="c-checkout-cart-button-top checkout-methods-items" before="checkout.cart.form">
                 <block class="Magento\Checkout\Block\Onepage\Link" name="checkout.cart.button.top" template="Magento_Checkout::onepage/link.phtml" />
             </container>
+            <block class="StudioEmma\Optimus\Block\Checkout\Cart\CartCountInfo" name="cart-count-info" before="checkout.cart.form">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="cartCountInfo" xsi:type="array">
+                                <item name="component" xsi:type="string">StudioEmma_Optimus/js/cartcountinfo</item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
         </referenceContainer>
         <move element="cart.summary" destination="checkout.cart.container" after="checkout.cart.form" />
     </body>
