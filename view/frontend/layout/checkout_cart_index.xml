@@ -13,6 +13,10 @@
                     </argument>
                 </arguments>
             </block>
+            <container name="checkout.cart.button.top.wrapper" htmlTag="div" htmlClass="c-checkout-cart-button-top checkout-methods-items" before="checkout.cart.form">
+                <block class="Magento\Checkout\Block\Onepage\Link" name="checkout.cart.button.top" template="Magento_Checkout::onepage/link.phtml" />
+            </container>
         </referenceContainer>
+        <move element="cart.summary" destination="checkout.cart.container" after="checkout.cart.form" />
     </body>
 </page>
