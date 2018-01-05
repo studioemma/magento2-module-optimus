@@ -7,4 +7,7 @@
             </argument>
         </arguments>
     </type>
+    <type name="Magento\Checkout\Block\Cart\Item\Renderer\Actions\Edit">
+        <plugin name="checkCartEditActionPlugin" type="StudioEmma\Optimus\Plugin\CheckCartEditActionPlugin" sortOrder="1" disabled="false"/>
+    </type>
 </config>
