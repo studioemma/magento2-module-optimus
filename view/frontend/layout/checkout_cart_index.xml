@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="checkout.cart.container">
+            <block class="StudioEmma\Optimus\Block\Checkout\Cart\MoreButton" name="more-button" after="checkout.cart.form">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="cartMoreButton" xsi:type="array">
+                                <item name="component" xsi:type="string">StudioEmma_Optimus/js/cartmorebutton</item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

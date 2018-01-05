@@ -1,0 +1,12 @@
+<div data-bind="scope: 'cartMoreButton'" id="cart-more-button" style="display: none;">
+    <button type="button" data-bind="visible: !remainingProductsShow(), click: showRemainingProducts"><span data-bind="text: remainingProductsMoreText"></span></button>
+    <button type="button" data-bind="visible: remainingProductsShow, click: hideRemainingProducts"><span data-bind="text: remainingProductsLessText"></span></button>
+</div>
+
+<script type="text/x-magento-init">
+{
+    "#cart-more-button": {
+        "Magento_Ui/js/core/app": <?php echo $block->getJsLayout();?>
+    }
+}
+</script>
