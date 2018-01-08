@@ -2,6 +2,11 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
 
+        <!-- Head (containing meta tags) -->
+        <referenceBlock name="head.additional">
+            <block class="StudioEmma\Optimus\Block\Opengraph\General" name="opengraph.general" template="StudioEmma_Optimus::html/opengraph/general.phtml" />
+        </referenceBlock>
+
         <!-- Footer (containing social) -->
         <referenceContainer name="footer" htmlClass="footer content colm-grid">
             <block class="StudioEmma\Optimus\Block\Html\Social" name="social" template="StudioEmma_Optimus::html/social.phtml" after="-" />

@@ -4,22 +4,30 @@
 
 /** @var $block \StudioEmma\Optimus\Block\Opengraph\General */
 
-$_helper_store = $this->helper('StudioEmma\Core\Helper\Store');
-
 $metaTitle = $block->getMetaTitle();
 $metaDescription = $block->getMetaDescription();
 
 /** @var Zend\Uri\Http $uri */
 $uri = $this->getRequest()->getUri();
 $ogUrl = $uri->getScheme() . '://' . $uri->getHost() . $this->getRequest()->getRequestUri();
+$ogLocale = $block->getOgLocale();
+$ogSiteName = $block->getOgSiteName();
 
 $ogImageUrl = $block->getOgImageUrl();
 $ogImageType = $block->getOgImageType();
 $ogImageDimensions = $block->getOgImageDimensions(); // 0 = width, 1 = height;
 
+$fbAppId = $block->getFbAppId();
+
 ?>
 
-<meta property="og:locale" content="<?php echo $_helper_store->getLocale()?>" />
+<meta name="twitter:card" content="summary" />
+
+<?php if (!empty($fbAppId)): ?>
+    <meta property="fb:app_id" content="<?php echo $fbAppId ?>" />
+<?php endif; ?>
+
+<meta property="og:locale" content="<?php echo $ogLocale ?>" />
 <meta property="og:type" content="website" />
 
 <?php if (!empty($metaTitle)): ?>
@@ -31,7 +39,7 @@ $ogImageDimensions = $block->getOgImageDimensions(); // 0 = width, 1 = height;
 <?php endif; ?>
 
 <meta property="og:url" content="<?php echo $ogUrl; ?>" />
-<meta property="og:site_name" content="<?php echo $this->getBaseUrl(); ?>" />
+<meta property="og:site_name" content="<?php echo $ogSiteName ?>" />
 
 <meta property="og:image" content="<?php echo $ogImageUrl; ?>" />
 <meta property="og:image:secure_url" content="<?php echo $ogImageUrl; ?>" />

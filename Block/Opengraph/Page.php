@@ -11,11 +11,6 @@ class Page extends \StudioEmma\Optimus\Block\Opengraph\General
     protected $_page;
 
     /**
-     * @var \Magento\Store\Model\StoreManagerInterface
-     */
-    protected $_storeManager;
-
-    /**
      *  @var \Magento\Framework\Filesystem
      */
     protected $_filesystem;
@@ -28,8 +23,9 @@ class Page extends \StudioEmma\Optimus\Block\Opengraph\General
     /**
      * @param \Magento\Framework\View\Element\Template\Context $context
      * @param \Magento\Framework\View\Page\Config $pageConfig
-     * @param \Magento\Cms\Model\Page $page
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
+     * @param \Magento\Framework\Locale\Resolver $localeResolver
+     * @param \Magento\Cms\Model\Page $page
      * @param \Magento\Framework\Filesystem $filesystem
      * @param \Magento\Catalog\Model\Category\FileInfo $fileInfo
      * @param array $data
@@ -37,17 +33,17 @@ class Page extends \StudioEmma\Optimus\Block\Opengraph\General
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
         \Magento\Framework\View\Page\Config $pageConfig,
-        \Magento\Cms\Model\Page $page,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
+        \Magento\Framework\Locale\Resolver $localeResolver,
+        \Magento\Cms\Model\Page $page,
         \Magento\Framework\Filesystem $filesystem,
         \Magento\Catalog\Model\Category\FileInfo $fileInfo,
         $data = []
     ) {
         $this->_page = $page;
-        $this->_storeManager = $storeManager;
         $this->_filesystem = $filesystem;
         $this->_fileInfo = $fileInfo;
-        parent::__construct($context, $pageConfig, $data);
+        parent::__construct($context, $pageConfig, $storeManager, $localeResolver, $data);
     }
 
     /**

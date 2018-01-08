@@ -59,6 +59,9 @@
                     <upload_dir config="system/filesystem/media" scope_info="1">socialmedia</upload_dir>
                     <base_url type="media" scope_info="1">socialmedia</base_url>
                 </field>
+                <field id="facebookappid" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Facebook App Id</label>
+                </field>
             </group>
             <group id="twitterchannel" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Twitter</label>
