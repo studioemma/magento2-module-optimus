@@ -41,7 +41,7 @@ class Social extends \Magento\Framework\View\Element\Template
     }
 
     public function getChannelIcon($channel) {
-        return '/media/socialmedia/'.$this->_scopeConfig->getValue('socialmediachannels/'.$channel.'channel/'.$channel.'icon', $this->_scope);
+        return $this->getUrl('pub/media/socialmedia').$this->_scopeConfig->getValue('socialmediachannels/'.$channel.'channel/'.$channel.'icon', $this->_scope);
     }
 
     public function getConfig()

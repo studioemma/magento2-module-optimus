@@ -23,10 +23,16 @@ class General extends \Magento\Framework\View\Element\Template
     protected $_localeResolver;
 
     /**
+     *  @var \Magento\Framework\Filesystem
+     */
+    protected $_filesystem;
+
+    /**
      * @param \Magento\Framework\View\Element\Template\Context $context
      * @param \Magento\Framework\View\Page\Config $pageConfig
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      * @param \Magento\Framework\Locale\Resolver $localeResolver
+     * @param \Magento\Framework\Filesystem $filesystem
      * @param array $data
      */
     public function __construct(
@@ -34,11 +40,13 @@ class General extends \Magento\Framework\View\Element\Template
         \Magento\Framework\View\Page\Config $pageConfig,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
         \Magento\Framework\Locale\Resolver $localeResolver,
+        \Magento\Framework\Filesystem $filesystem,
         $data = []
     ) {
         $this->_pageConfig = $pageConfig;
         $this->_storeManager = $storeManager;
         $this->_localeResolver = $localeResolver;
+        $this->_filesystem = $filesystem;
         parent::__construct($context, $data);
     }
 
@@ -98,6 +106,10 @@ class General extends \Magento\Framework\View\Element\Template
     public function getOgImageUrl()
     {
         $url = $this->getViewFileUrl('Magento_Theme::images/facebook-og-preview.jpg');
+        $configOgImage = $this->_scopeConfig->getValue('socialmediachannels/facebookchannel/facebookogimage', $this->_scope);
+        if (!empty($configOgImage)) {
+            $url = $this->getUrl('pub/media/socialmedia').$configOgImage;
+        }
         return $url;
     }
 
@@ -107,6 +119,12 @@ class General extends \Magento\Framework\View\Element\Template
     public function getOgImageType()
     {
         $type = "image/jpg";
+        $configOgImage = $this->_scopeConfig->getValue('socialmediachannels/facebookchannel/facebookogimage', $this->_scope);
+        if (!empty($configOgImage)) {
+            $mediapath = $this->_filesystem->getDirectoryRead(\Magento\Framework\App\Filesystem\DirectoryList::MEDIA)->getAbsolutePath();
+            $filepath = $mediapath . 'socialmedia/' . $configOgImage;
+            $type = mime_content_type($filepath);
+        }
         return $type;
     }
 
@@ -116,6 +134,12 @@ class General extends \Magento\Framework\View\Element\Template
     public function getOgImageDimensions()
     {
         $dimensions = array('1200', '600');
+        $configOgImage = $this->_scopeConfig->getValue('socialmediachannels/facebookchannel/facebookogimage', $this->_scope);
+        if (!empty($configOgImage)) {
+            $mediapath = $this->_filesystem->getDirectoryRead(\Magento\Framework\App\Filesystem\DirectoryList::MEDIA)->getAbsolutePath();
+            $filepath = $mediapath . 'socialmedia/' . $configOgImage;
+            $dimensions = getimagesize($filepath);
+        }
         return $dimensions;
     }
 }

@@ -11,11 +11,6 @@ class Page extends \StudioEmma\Optimus\Block\Opengraph\General
     protected $_page;
 
     /**
-     *  @var \Magento\Framework\Filesystem
-     */
-    protected $_filesystem;
-
-    /**
      *  @var \Magento\Catalog\Model\Category\FileInfo
      */
     protected $_fileInfo;
@@ -25,8 +20,8 @@ class Page extends \StudioEmma\Optimus\Block\Opengraph\General
      * @param \Magento\Framework\View\Page\Config $pageConfig
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      * @param \Magento\Framework\Locale\Resolver $localeResolver
-     * @param \Magento\Cms\Model\Page $page
      * @param \Magento\Framework\Filesystem $filesystem
+     * @param \Magento\Cms\Model\Page $page
      * @param \Magento\Catalog\Model\Category\FileInfo $fileInfo
      * @param array $data
      */
@@ -35,15 +30,14 @@ class Page extends \StudioEmma\Optimus\Block\Opengraph\General
         \Magento\Framework\View\Page\Config $pageConfig,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
         \Magento\Framework\Locale\Resolver $localeResolver,
-        \Magento\Cms\Model\Page $page,
         \Magento\Framework\Filesystem $filesystem,
+        \Magento\Cms\Model\Page $page,
         \Magento\Catalog\Model\Category\FileInfo $fileInfo,
         $data = []
     ) {
         $this->_page = $page;
-        $this->_filesystem = $filesystem;
         $this->_fileInfo = $fileInfo;
-        parent::__construct($context, $pageConfig, $storeManager, $localeResolver, $data);
+        parent::__construct($context, $pageConfig, $storeManager, $localeResolver, $filesystem, $data);
     }
 
     /**
@@ -51,7 +45,6 @@ class Page extends \StudioEmma\Optimus\Block\Opengraph\General
      */
     public function getOgImageUrl()
     {
-        $url = $this->getViewFileUrl('Magento_Theme::images/facebook-og-preview.jpg');
         $image = $this->_page->getData('og_image');
         if ($image) {
             if (is_string($image)) {
@@ -59,6 +52,9 @@ class Page extends \StudioEmma\Optimus\Block\Opengraph\General
                     \Magento\Framework\UrlInterface::URL_TYPE_MEDIA
                 ) . 'catalog/category/' . $image;
             }
+        }
+        if (empty($url)) {
+            $url = parent::getOgImageUrl();
         }
         return $url;
     }
@@ -68,12 +64,14 @@ class Page extends \StudioEmma\Optimus\Block\Opengraph\General
      */
     public function getOgImageType()
     {
-        $type = "image/jpg";
         $image = $this->_page->getData('og_image');
         if ($image) {
             if (is_string($image)) {
                 $type = $this->_fileInfo->getMimeType($image);
             }
+        }
+        if (empty($type)) {
+            $type = parent::getOgImageType();
         }
         return $type;
     }
@@ -83,7 +81,6 @@ class Page extends \StudioEmma\Optimus\Block\Opengraph\General
      */
     public function getOgImageDimensions()
     {
-        $dimensions = array('1200', '600');
         $image = $this->_page->getData('og_image');
         if ($image) {
             if (is_string($image)) {
@@ -91,6 +88,9 @@ class Page extends \StudioEmma\Optimus\Block\Opengraph\General
                 $filepath = $mediapath . 'catalog/category/' . $image;
                 $dimensions = getimagesize($filepath);
             }
+        }
+        if (empty($dimensions)) {
+            $dimensions = parent::getOgImageDimensions();
         }
         return $dimensions;
     }
