@@ -1,4 +1,7 @@
-define(['jquery'], function ($) {
+define([
+    'jquery',
+    'Magento_Customer/js/customer-data'
+], function ($, customerData) {
     'use strict';
 
     var minicart = $('[data-block="minicart"]');
@@ -15,6 +18,8 @@ define(['jquery'], function ($) {
 
         update: function (updatedCart) {
 
+            console.log('update');
+
             this._super(updatedCart);
 
             if (updateCount >= 1) {
@@ -26,6 +31,25 @@ define(['jquery'], function ($) {
             }
         }
     };
+
+    var cartOpenData = customerData.get('cartOpenData');
+
+    if (!cartOpenData().openCartAfterAddingProduct) {
+        // do not extend
+        return function (target) {
+            if (cartOpenData().openCartAfterAddingProduct === undefined) {
+                // extend later
+                cartOpenData.subscribe(function (newData) {
+                    console.log('later');
+                    if (newData.openCartAfterAddingProduct) {
+                        console.log('extend');
+                        target.extend(mixin);
+                    }
+                });
+            }
+            return target;
+        };
+    }
 
     return function (target) {
         return target.extend(mixin);

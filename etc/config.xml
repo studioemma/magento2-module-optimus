@@ -60,6 +60,7 @@
         </socialmediachannels>
         <checkout>
             <cart>
+                <open_cart_after_adding>1</open_cart_after_adding>
                 <select_qty_enabled>1</select_qty_enabled>
                 <select_qty_options>1-5</select_qty_options>
                 <number_of_items_mobile_cart>3</number_of_items_mobile_cart>

@@ -4,6 +4,7 @@
         <arguments>
             <argument name="sectionSourceMap" xsi:type="array">
                 <item name="cartMoreButtonData" xsi:type="string">StudioEmma\Optimus\CustomerData\CartMoreButtonData</item>
+                <item name="cartOpenData" xsi:type="string">StudioEmma\Optimus\CustomerData\CartOpenData</item>
             </argument>
         </arguments>
     </type>
