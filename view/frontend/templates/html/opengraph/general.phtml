@@ -12,6 +12,7 @@ $uri = $this->getRequest()->getUri();
 $ogUrl = $uri->getScheme() . '://' . $uri->getHost() . $this->getRequest()->getRequestUri();
 $ogLocale = $block->getOgLocale();
 $ogSiteName = $block->getOgSiteName();
+$ogType = $block->getOgType();
 
 $ogImageUrl = $block->getOgImageUrl();
 $ogImageType = $block->getOgImageType();
@@ -28,7 +29,7 @@ $fbAppId = $block->getFbAppId();
 <?php endif; ?>
 
 <meta property="og:locale" content="<?php echo $ogLocale ?>" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="<?php echo $ogType ?>" />
 
 <?php if (!empty($metaTitle)): ?>
     <meta property="og:title" content="<?php echo $metaTitle; ?>" />

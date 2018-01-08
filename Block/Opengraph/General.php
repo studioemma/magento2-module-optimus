@@ -53,6 +53,14 @@ class General extends \Magento\Framework\View\Element\Template
     /**
      * @return string
      */
+    public function getOgType()
+    {
+        return 'website';
+    }
+
+    /**
+     * @return string
+     */
     public function getOgSiteName()
     {
         return $this->_storeManager->getStore()->getName();
