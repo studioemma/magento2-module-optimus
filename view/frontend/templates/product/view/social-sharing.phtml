@@ -1,0 +1,60 @@
+<?php
+    $_product = $block->getProduct();
+    $_productName = urlencode($_product->getName());
+    $_productUrl = $_product->getProductUrl();
+    // See Stores -> Configuration -> Social Media
+    if ($block->canRender()):
+        $addThis = $block->getAddThisCode();
+        if (!empty($addThis)):
+            echo '<div class="social-sharing">';
+            echo $addThis;
+            echo '</div>';
+        else:
+?>
+<div class="social-sharing">
+    <div class="hover-action-container">
+        <a href="javascript:void(0)" title="" class="hover-action"><?=__('Share')?></a>
+        <div class="hover-action-content">
+            <div class="social">
+                <ul>
+                    <?php if ($block->canRenderChannel('facebook')): ?>
+                    <li>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $_productUrl; ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=440,width=600');return false;" title="" class="social-facebook">
+                            <span>&nbsp;</span>
+                        </a>
+                    </li>
+                    <?php endif; ?>
+                    <?php if ($block->canRenderChannel('twitter')): ?>
+                    <li>
+                        <a href="https://twitter.com/intent/tweet?text=<?php echo $_productName . '+' . $_productUrl; ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=440,width=600');return false;" title="" class="social-twitter twitter-share-button">
+                            <span>&nbsp;</span>
+                        </a>
+                    </li>
+                    <?php endif; ?>
+                    <?php if ($block->canRenderChannel('linkedin')): ?>
+                    <li>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo $_productUrl; ?>&title=<?php echo $_productName ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=440,width=600');return false;" title="" class="social-linkedin">
+                            <span>&nbsp;</span>
+                        </a>
+                    </li>
+                    <?php endif; ?>
+                    <?php if ($block->canRenderChannel('pinterest')): ?>
+                    <li>
+                        <a href="http://pinterest.com/pin/create/button/?url=<?php echo $_productUrl; ?>&media=<?php echo $block->getImage($_product, "product_page_main_image_default")->getImageUrl(); ?>&description=<?php echo $_productName; ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=440,width=600');return false;" title="" class="social-pinterest">
+                            <span>&nbsp;</span>
+                        </a>
+                    </li>
+                    <?php endif; ?>
+                    <?php if ($block->canRenderChannel('googleplus')): ?>
+                    <li>
+                        <a href="https://plus.google.com/share?url=<?php echo $_productUrl; ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=440,width=600');return false;" title="" class="social-googleplus">
+                            <span>&nbsp;</span>
+                        </a>
+                    </li>
+                    <?php endif; ?>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endif; endif; ?>
