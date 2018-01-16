@@ -8,10 +8,13 @@ define(["jquery"], function($){
                     $(this).next(".qty").css('display', 'inline-block');
                     $(this).next(".qty").focus();
                     $(this).next(".qty").select();
+                    $(this).siblings('.small-save-button').css('display','inline-block');
                 } else {
                     $(this).next(".qty").val($(this).val());
+                    if ($('#form-validate').length) {
+                        $('#form-validate').submit();
+                    }
                 }
-                $(this).siblings('.small-save-button').css('display','inline-block');
             });
         }
     };
