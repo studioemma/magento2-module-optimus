@@ -2,7 +2,7 @@
   "name": "studioemma/magento2-module-optimus",
   "description": "Optimus module with enhancements to blank Magento theme",
   "type": "magento2-module",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "license": [
     "OSL-3.0"
   ],
