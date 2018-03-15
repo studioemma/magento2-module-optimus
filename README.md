@@ -1,6 +1,6 @@
 ## Synopsis
 
-This modules contains several enhancements to Magento for our Mase 2 Optimus theme
+This module supports our Magento 2 Optimus theme. See https://github.com/studioemma/magento2-theme-optimus
 
 
 ## Content examples
