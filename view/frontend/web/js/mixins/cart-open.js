@@ -18,11 +18,16 @@ define(['jquery'], function ($) {
             this._super(updatedCart);
 
             if (updateCount >= 1) {
-                minicart.find('[data-role="dropdownDialog"]').dropdownDialog("open");
-                clearTimeout(openTO);
-                openTO = setTimeout(function() {
-                    minicart.find('[data-role="dropdownDialog"]').dropdownDialog("close");
-                }, 10000);
+
+                if (mincart && minicart.find('[data-role="dropdownDialog"]').length) {
+
+                    minicart.find('[data-role="dropdownDialog"]').dropdownDialog("open");
+                    clearTimeout(openTO);
+                    openTO = setTimeout(function() {
+                        minicart.find('[data-role="dropdownDialog"]').dropdownDialog("close");
+                    }, 10000);
+
+                }
             }
         }
     };
