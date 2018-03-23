@@ -19,7 +19,7 @@ define(['jquery'], function ($) {
 
             if (updateCount >= 1) {
 
-                if (mincart && minicart.find('[data-role="dropdownDialog"]').length) {
+                if (minicart && minicart.find('[data-role="dropdownDialog"]').length) {
 
                     minicart.find('[data-role="dropdownDialog"]').dropdownDialog("open");
                     clearTimeout(openTO);
