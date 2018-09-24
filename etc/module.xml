@@ -6,7 +6,7 @@
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Module/etc/module.xsd">
-    <module name="StudioEmma_Optimus" setup_version="2.0.15">
+    <module name="StudioEmma_Optimus" setup_version="2.0.16">
         <sequence>
             <module name="Magento_Cms"/>
             <module name="Magento_Catalog"/>
