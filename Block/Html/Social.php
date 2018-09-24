@@ -28,7 +28,7 @@ class Social extends \Magento\Framework\View\Element\Template
 
     public function getChannelAlt($channel, $label)
     {
-        return (!empty($this->_scopeConfig->getValue('socialmediachannels/'.$channel.'channel/'.$channel.'followlinkalt', $this->_scope))) ? $this->_scopeConfig->getValue('socialmediachannels/'.$channel.'channel/'.$channel.'followlinkalt', $this->_scope) : __('Follow us on %s', $label);
+        return (!empty($this->_scopeConfig->getValue('socialmediachannels/'.$channel.'channel/'.$channel.'followlinkalt', $this->_scope))) ? $this->_scopeConfig->getValue('socialmediachannels/'.$channel.'channel/'.$channel.'followlinkalt', $this->_scope) : __('Follow us on %1', $label);
     }
 
     public function getChannelCssClass($channel)
