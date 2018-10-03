@@ -182,4 +182,22 @@ class Navigation extends \Magento\Catalog\Block\Navigation
         return $this->_columnCount;
     }
 
+    /**
+     *  @return array
+     */
+    public function getSubcategories($category)
+    {
+        $subcategories = [];
+        if ($category->hasChildren()) {
+            foreach ($category->getChildrenCategories() as $childCategory) {
+                $subcategory = $this->getCategoryById($childCategory->getId());
+                if ($subcategory->getIsActive() && ($subcategory->getIncludeInMenu() || empty($this->getOnlyCatsIncludedInMenu()))){
+                    $subcategories[] = $subcategory;
+                }
+
+            }
+        }
+        return $subcategories;
+    }
+
 }
