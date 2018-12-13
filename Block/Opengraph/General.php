@@ -116,7 +116,7 @@ class General extends \Magento\Framework\View\Element\Template
         $url = $this->getViewFileUrl('Magento_Theme::images/facebook-og-preview.jpg');
         $configOgImage = $this->_scopeConfig->getValue('socialmediachannels/facebookchannel/facebookogimage', $this->_scope);
         if (!empty($configOgImage)) {
-            $url = $this->getUrl('pub/media/socialmedia').$configOgImage;
+            $url = $this->_storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) . 'socialmedia/'.$configOgImage;
         }
         return $url;
     }
