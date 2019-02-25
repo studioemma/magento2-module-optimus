@@ -3,14 +3,14 @@
 if ($block->canRender()):
     $channels = $block->getChannels();
 ?>
-<div class="social">
+<div class="c-social">
     <ul>
     <?php foreach ($channels as $channel => $label): ?>
         <?php if ($block->canRenderChannel($channel)): ?>
         <li>
             <a href="<?= $block->getChannelLink($channel) ?>"
                     title="<?= $block->getChannelAlt($channel, $label) ?>"
-                    class="<?= $block->getChannelCssClass($channel) ?>">
+                    class="c-social__channel <?= $block->getChannelCssClass($channel) ?>">
                 <?php if ($block->channelHasIcon($channel)): ?>
                 <img src="<?= $block->getChannelIcon($channel) ?>"
                             alt="<?= $block->getChannelAlt($channel, $label) ?>" />

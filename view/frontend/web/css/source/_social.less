@@ -1,169 +1,121 @@
+@social-icon__fontsize: 2.4rem;
+
 //
 //  Common
 //  _____________________________________________
 
 & when (@media-common = true) {
 
-    .footer.content ul,
-    .social ul {
-        text-align: left;
-        margin: 0 0 2rem;
-        padding: 0;
-        list-style: none none;
+    .c-social {
+        ul,
+        .footer.content & ul{
 
-        > li {
-            margin: 0 2.4rem 0.5rem 0;
-            display: inline-block;
-            vertical-align: middle;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            list-style: none none;
 
-            a {
-                color: @primary__color;
-                text-decoration: none;
-
-                &:link, &:visited {
+            > li {
+                margin: 0 2.4rem 0.5rem 0;
+                display: inline-block;
+                vertical-align: middle;
+    
+                a {
                     color: @primary__color;
                     text-decoration: none;
+    
+                    &:link, &:visited {
+                        color: @primary__color;
+                        text-decoration: none;
+                    }
+    
+                    &:active, &:hover {
+                        color: @primary__color;
+                        text-decoration: none;
+                    }
                 }
-
-                &:active, &:hover {
-                    color: @primary__color;
-                    text-decoration: none;
-                }
-            }
+            }   
         }
     }
 
-    .social-facebook {
-        font-size: 2.4rem;
-
+    .c-social__channel{
+        font-size: @social-icon__fontsize;
         span {
             display: none;
         }
 
         &:before {
             font-family: 'FontAwesome';
-            content: '\f09a';
         }
 
+    }
+    .social-facebook {
+        &:before {
+            content: '\f09a';
+        }
         &:hover:before {
             color: #3b5998!important;
         }
     }
 
     .social-twitter {
-        font-size: 2.4rem;
-
-        span {
-            display: none;
-        }
-
         &:before {
-            font-family: 'FontAwesome';
             content: '\f099';
         }
-
         &:hover:before {
             color: #55acee!important;
         }
     }
 
     .social-instagram {
-        font-size: 2.4rem;
-
-        span {
-            display: none;
-        }
-
         &:before {
-            font-family: 'FontAwesome';
             content: '\f16d';
         }
-
         &:hover:before {
             color: #c13584!important;
         }
     }
 
     .social-linkedin {
-        font-size: 2.4rem;
-
-        span {
-            display: none;
-        }
-
         &:before {
-            font-family: 'FontAwesome';
             content: '\f0e1';
         }
-
         &:hover:before {
             color: #007bb5!important;
         }
     }
 
     .social-youtube {
-        font-size: 2.4rem;
-
-        span {
-            display: none;
-        }
-
         &:before {
-            font-family: 'FontAwesome';
             content: '\f16a';
         }
-
         &:hover:before {
             color: #ff0000!important;
         }
     }
 
     .social-pinterest {
-        font-size: 2.4rem;
-
-        span {
-            display: none;
-        }
-
         &:before {
-            font-family: 'FontAwesome';
             content: '\f231';
         }
-
         &:hover:before {
             color: #bd081c!important;
         }
     }
 
     .social-googleplus {
-        font-size: 2.4rem;
-
-        span {
-            display: none;
-        }
-
         &:before {
-            font-family: 'FontAwesome';
             content: '\f0d5';
         }
-
         &:hover:before {
             color: #dd4b39!important;
         }
     }
 
     .social-vimeo {
-        font-size: 2.4rem;
-
-        span {
-            display: none;
-        }
-
         &:before {
-            font-family: 'FontAwesome';
             content: '\f27d';
         }
-
         &:hover:before {
             color: #1ab7ea!important;
         }
@@ -184,7 +136,7 @@
     .social-sharing {
         margin: 2rem 0;
 
-        .social {
+        .c-social {
 
             ul {
                 margin: 0;
