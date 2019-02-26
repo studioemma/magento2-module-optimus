@@ -6,6 +6,7 @@
 
 & when (@media-common = true) {
 
+    // Social channels
     .c-social {
         ul,
         .footer.content & ul{
@@ -14,6 +15,7 @@
             margin: 0;
             padding: 0;
             list-style: none none;
+            text-align: right;
 
             > li {
                 margin: 0 2.4rem 0.5rem 0;
@@ -133,14 +135,13 @@
         }
     }
 
-    .social-sharing {
-        margin: 2rem 0;
+    // Social sharing
+    .c-social-sharing {
+        margin: @indent__xs 0;
 
         .c-social {
 
             ul {
-                margin: 0;
-
                 > li {
                     margin-bottom: 0;
 
