@@ -4,7 +4,11 @@
  * See COPYING.txt for license details.
  */
 ?>
-<p class="supporting"><a href="/content"><?php echo __('Back to overview') ?></a></p>
+<p class="supporting">
+    <a href="<?= $block->getUrl('content') ?>">
+        <span><?= __('Back to overview') ?></span>
+    </a>
+</p>
 <section class="content-row">
 <h1 class="supporting">Basic layout</h1>
 <p class="supporting intro">This document shows how basic layout will look like. Titles, quotes, numeric lists, regular lists, dividers to to divide sections, ... With the exception of dividers &amp; status messages, you can use this formatting through the Word-a-like interface. Dividers &amp; status messages can be used by copy-pasting the htmlcode into your own CMS page or static block.</p>

@@ -1,16 +1,38 @@
-<?php
-/**
- * Copyright © 2015 Magento. All rights reserved.
- * See COPYING.txt for license details.
- */
-?>
-<p><?php echo __('Below are links to pages that contain examples for your content. Everything can be used in CMS pages and CMS static blocks.') ?></p>
+<p><?= __('Below are links to pages that contain examples for your content. Everything can be used in CMS pages and CMS static blocks.') ?></p>
 <ul>
-    <li><a href="/content/basic"><?php echo __('Basic styling (titles, lists, quotes, etc)') ?></a></li>
-    <li><a href="/content/images"><?php echo __('Images & video (full-width image, 2 images next to eachother, etc)') ?></a></li>
-    <li><a href="/content/interaction"><?php echo __('Interaction (faq style, show more/less)') ?></a></li>
-    <li><a href="/content/layout"><?php echo __('Layout (structure examples. 1 column, 2 column, 3 columns etc)') ?></a></li>
-    <li><a href="/content/layout/wide"><?php echo __('Pagewide layout structures') ?></a></li>
-    <li><a href="/content/responsive"><?php echo __('Classes for showing and hiding elements on certain screenwidths') ?></a></li>
-    <li><a href="/content/specific"><?php echo __('Specific contentblocks for your site') ?></a></li>
+    <li>
+        <a href="<?= $block->getUrl('content/basic') ?>">
+            <span><?= __('Basic styling (titles, lists, quotes, etc)') ?></span>
+        </a>
+    </li>
+    <li>
+        <a href="<?= $block->getUrl('content/images') ?>">
+            <span><?= __('Images & video (full-width image, 2 images next to eachother, etc)') ?></span>
+        </a>
+    </li>
+    <li>
+        <a href="<?= $block->getUrl('content/interaction') ?>">
+            <span><?= __('Interaction (faq style, show more/less)') ?></span>
+        </a>
+    </li>
+    <li>
+        <a href="<?= $block->getUrl('content/layout') ?>">
+            <span><?= __('Layout (structure examples. 1 column, 2 column, 3 columns etc)') ?></span>
+        </a>
+    </li>
+    <li>
+        <a href="<?= $block->getUrl('content/layout/wide') ?>">
+            <span><?= __('Pagewide layout structures') ?></span>
+        </a>
+    </li>
+    <li>
+        <a href="<?= $block->getUrl('content/responsive') ?>">
+            <span><?= __('Classes for showing and hiding elements on certain screenwidths') ?></span>
+        </a>
+    </li>
+    <li>
+        <a href="<?= $block->getUrl('content/specific') ?>">
+            <span><?= __('Specific contentblocks for your site') ?></span>
+        </a>
+    </li>
 </ul>

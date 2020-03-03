@@ -20,7 +20,7 @@
         </referenceBlock>
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/specific.phtml" name="optimus-content-specific" />
-            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/specific/dummy.phtml" name="optimus-content-specific-dummy" />
+            <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/specific/empty.phtml" name="optimus-content-specific-dummy" />
         </referenceContainer>
     </body>
 </page>

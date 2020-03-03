@@ -3,7 +3,12 @@
 //  Resposive show hide examples
 //  ____________________________
 ?>
-<p class="supporting"><a href="/content"><?php echo __('Back to overview') ?></a></p>
+<p class="supporting">
+    <a href="<?= $block->getUrl('content') ?>">
+        <span><?= __('Back to overview') ?></span>
+    </a>
+</p>
+
 <h4 class="supporting">This document shows specific classes you can use to show or hide certain elements on certain screensizes.</h4>
 
 <script type="text/javascript">

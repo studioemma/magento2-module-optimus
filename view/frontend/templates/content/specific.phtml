@@ -4,8 +4,14 @@
  * See COPYING.txt for license details.
  */
 ?>
-<p class="supporting"><a href="/content"><?php echo __('Back to overview') ?></a></p>
-<h4 class="supporting">This document shows specific contentblocks which you can use to add to your website.</h4>
+<div class="content-wrapper">
+    <p class="supporting">
+        <a href="<?= $block->getUrl('content') ?>">
+            <span><?= __('Back to overview') ?></span>
+        </a>
+    </p>
+    <h4 class="supporting">This document shows specific contentblocks which you can use to add to your website.</h4>
+</div>
 
 <script type="text/javascript">
 require(["jquery"], function($){

@@ -5,7 +5,11 @@
  */
 ?>
 <div class="content-wrapper">
-    <p class="supporting"><a href="/content"><?php echo __('Back to overview') ?></a></p>
+    <p class="supporting">
+        <a href="<?= $block->getUrl('content') ?>">
+            <span><?= __('Back to overview') ?></span>
+        </a>
+    </p>
     <h4 class="supporting">This document shows page-wide layouts you can use on your website.</h4>
 </div>
 
