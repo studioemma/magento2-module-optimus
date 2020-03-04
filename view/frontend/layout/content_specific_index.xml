@@ -1,26 +1,19 @@
 <?xml version="1.0"?>
-<!--
-/**
- * Copyright © 2015 Magento. All rights reserved.
- * See COPYING.txt for license details.
- */
--->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column-wide" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="content_default_update" />
     <head>
         <title>
             Specific content blocks
         </title>
     </head>
     <body>
-        <!-- NORMAL HEAD TITLE IS NOT TRANSLATED -->
-        <referenceBlock name="page.main.title">
-            <action method="setPageTitle">
-                <argument translate="true" name="title" xsi:type="string">Specific content blocks</argument>
-            </action>
-        </referenceBlock>
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/specific.phtml" name="optimus-content-specific" />
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/specific/empty.phtml" name="optimus-content-specific-dummy" />
         </referenceContainer>
+        <referenceContainer name="content">
+            <container name="page.main.title.wrapper" htmlTag="div" htmlClass="content-wrapper" before="-" />
+        </referenceContainer>
+        <move element="page.main.title" destination="page.main.title.wrapper" before="-"/>
     </body>
 </page>

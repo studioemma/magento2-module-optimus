@@ -1,17 +1,12 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="content_default_update" />
     <head>
         <title>
             Classes for responsive
         </title>
     </head>
     <body>
-        <!-- NORMAL HEAD TITLE IS NOT TRANSLATED -->
-        <referenceBlock name="page.main.title">
-            <action method="setPageTitle">
-                <argument translate="true" name="title" xsi:type="string">Classes for responsive</argument>
-            </action>
-        </referenceBlock>
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive.phtml" name="optimus-content-responsive" />
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/responsive/responsive-show-desktop.phtml" name="optimus-content-responsive-show-desktop" />

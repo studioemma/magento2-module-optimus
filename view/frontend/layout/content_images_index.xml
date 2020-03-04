@@ -1,23 +1,12 @@
 <?xml version="1.0"?>
-<!--
-/**
- * Copyright © 2015 Magento. All rights reserved.
- * See COPYING.txt for license details.
- */
--->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="content_default_update" />
     <head>
         <title>
             Images and video within content
         </title>
     </head>
     <body>
-        <!-- NORMAL HEAD TITLE IS NOT TRANSLATED -->
-        <referenceBlock name="page.main.title">
-            <action method="setPageTitle">
-                <argument translate="true" name="title" xsi:type="string">Images and video within content</argument>
-            </action>
-        </referenceBlock>
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images.phtml" name="optimus-content-images" />
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/images/inline-wrap.phtml" name="optimus-content-images-inline-wrap" />

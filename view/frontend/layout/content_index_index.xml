@@ -1,24 +1,12 @@
 <?xml version="1.0"?>
-<!--
-/**
- * Copyright © 2015 Magento. All rights reserved.
- * See COPYING.txt for license details.
- */
--->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="content_default_update" />
     <head>
         <title>Styling for content - Index</title>
     </head>
     <body>
-        <!-- NORMAL HEAD TITLE IS NOT TRANSLATED -->
-        <referenceBlock name="page.main.title">
-            <action method="setPageTitle">
-                <argument translate="true" name="title" xsi:type="string">Styling for content - Index</argument>
-            </action>
-        </referenceBlock>
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" template="StudioEmma_Optimus::content/index.phtml"/>
         </referenceContainer>
-        <move element="page.main.title" destination="content" before="-"/>
     </body>
 </page>
