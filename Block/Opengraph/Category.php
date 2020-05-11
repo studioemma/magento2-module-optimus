@@ -72,9 +72,7 @@ class Category extends \StudioEmma\Optimus\Block\Opengraph\General
         $image = $this->getCategoryImage();
         if ($image) {
             if (is_string($image)) {
-                $url = $this->_storeManager->getStore()->getBaseUrl(
-                    \Magento\Framework\UrlInterface::URL_TYPE_MEDIA
-                ) . 'catalog/category/' . $image;
+                $url = rtrim($this->_storeManager->getStore()->getBaseUrl(), '/') . $image;
             }
         }
         if (empty($url)) {
@@ -91,7 +89,11 @@ class Category extends \StudioEmma\Optimus\Block\Opengraph\General
         $image = $this->getCategoryImage();
         if ($image) {
             if (is_string($image)) {
-                $type = $this->_fileInfo->getMimeType($image);
+                $pubpath = $this->_filesystem->getDirectoryRead(\Magento\Framework\App\Filesystem\DirectoryList::PUB)->getAbsolutePath();
+                $filepath = rtrim($pubpath, '/') . $image;
+                if (file_exists($filepath)) {
+                    $type = $this->_fileInfo->getMimeType($image);
+                }
             }
         }
         if (empty($type)) {
@@ -108,9 +110,11 @@ class Category extends \StudioEmma\Optimus\Block\Opengraph\General
         $image = $this->getCategoryImage();
         if ($image) {
             if (is_string($image)) {
-                $mediapath = $this->_filesystem->getDirectoryRead(\Magento\Framework\App\Filesystem\DirectoryList::MEDIA)->getAbsolutePath();
-                $filepath = $mediapath . 'catalog/category/' . $image;
-                $dimensions = getimagesize($filepath);
+                $pubpath = $this->_filesystem->getDirectoryRead(\Magento\Framework\App\Filesystem\DirectoryList::PUB)->getAbsolutePath();
+                $filepath = rtrim($pubpath, '/') . $image;
+                if (file_exists($filepath)) {
+                    $dimensions = getimagesize($filepath);
+                }
             }
         }
         if (empty($dimensions)) {
