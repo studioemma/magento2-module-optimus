@@ -2,6 +2,8 @@
 
 namespace StudioEmma\Optimus\Block\Html;
 
+use Magento\Framework\UrlInterface;
+
 class Social extends \Magento\Framework\View\Element\Template
 {
     protected $_scope = \Magento\Store\Model\ScopeInterface::SCOPE_STORE;
