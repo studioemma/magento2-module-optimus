@@ -2,6 +2,8 @@
 
 namespace StudioEmma\Optimus\Block\Html;
 
+use Magento\Framework\UrlInterface;
+
 class Social extends \Magento\Framework\View\Element\Template
 {
     protected $_scope = \Magento\Store\Model\ScopeInterface::SCOPE_STORE;
@@ -40,12 +42,31 @@ class Social extends \Magento\Framework\View\Element\Template
         return !empty($this->_scopeConfig->getValue('socialmediachannels/'.$channel.'channel/'.$channel.'icon', $this->_scope));
     }
 
-    public function getChannelIcon($channel) {
-        return $this->getUrl('pub/media/socialmedia').$this->_scopeConfig->getValue('socialmediachannels/'.$channel.'channel/'.$channel.'icon', $this->_scope);
+    /**
+     * @param $channel
+     * @return string
+     */
+    public function getChannelIcon($channel)
+    {
+        return $this->getMediaBaseUrl(sprintf(
+            '%s/%s',
+            'socialmedia',
+            $this->_scopeConfig->getValue('socialmediachannels/'.$channel.'channel/'.$channel.'icon', $this->_scope)
+        ));
     }
 
     public function getConfig()
     {
         return $this->_scopeConfig;
+    }
+
+    /**
+     * @param string $subPath
+     * @return string
+     */
+    protected function getMediaBaseUrl(string $subPath = "")
+    {
+        $mediaBaseUrl = $this->_urlBuilder->getBaseUrl(['_type' => UrlInterface::URL_TYPE_MEDIA]);
+        return sprintf('%s%s', $mediaBaseUrl, $subPath);
     }
 }
