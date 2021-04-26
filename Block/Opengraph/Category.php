@@ -72,7 +72,9 @@ class Category extends \StudioEmma\Optimus\Block\Opengraph\General
         $image = $this->getCategoryImage();
         if ($image) {
             if (is_string($image)) {
-                $url = rtrim($this->_storeManager->getStore()->getBaseUrl(), '/') . $image;
+                $url = $this->_storeManager->getStore()->getBaseUrl(
+                    \Magento\Framework\UrlInterface::URL_TYPE_MEDIA
+                ) . 'catalog/category/' . $image;
             }
         }
         if (empty($url)) {
